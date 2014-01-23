@@ -23,7 +23,7 @@ my $address =shift;
 
 my $dbhost='127.0.0.1'; my $dbport=3306;
 my $dsn="DBI:mysql:dbtest;host=$dbhost;port=$dbport";
-$dbh = DBI->connect($dsn, 'dbtestuser', 'dbpassword'
+$dbh = DBI->connect($dsn, 'dbroot', 'dbpassword'
                 ) || die "Could not connect to database: $DBI::errstr";
 $sth = $dbh->prepare("insert into custdetails(name,address) values(?,?)");
 $sth->execute($name,$address);
