@@ -21,7 +21,7 @@ sub insertDB {
 my $name = shift;
 my $address =shift;
 
-my $dbhost='54.194.154.110'; my $dbport=3306;
+my $dbhost='127.0.0.1'; my $dbport=3306;
 my $dsn="DBI:mysql:dbtest;host=$dbhost;port=$dbport";
 $dbh = DBI->connect($dsn, 'dbtestuser', 'dbpassword'
                 ) || die "Could not connect to database: $DBI::errstr";
@@ -30,7 +30,7 @@ $sth->execute($name,$address);
 }
 
 sub showDB {
-my $dbhost='54.194.154.110'; my $dbport=3306;
+my $dbhost='127.0.0.1'; my $dbport=3306;
 my $dsn="DBI:mysql:dbtest;host=$dbhost;port=$dbport";
 $dbh = DBI->connect($dsn, 'dbtestuser', 'dbpassword'
                 ) || die "Could not connect to database: $DBI::errstr";
